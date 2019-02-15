@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/buy_jl.css" />
+		<link rel="stylesheet" type="text/css" href="css/comm.css" />
+		
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="top">
+				<img src="vipcenter/index/comeback.png" / class="return-img goto" index="viparea.html">
+				<p class="vip-N">购买记录</p>
+			</div>
+
+			<div class="container">
+				<ul class="list-ul">
+					<li id="li" class="list-li">
+						<div class="con">
+
+							
+								<img class="list-img" src="vipcenter/viparea/tu2.png" />
+							
+								<ul class="list1">
+									<li>
+										<a class="time">2016-1-1 11:20</a>
+									</li>
+									<li><span class="intro">缅甸和田籽翠绿玉石绿松石绿松石绿松石...
+                        	</span></li>
+									<li>
+										<a class="money">￥ 800</a>
+									</li>
+									<li>
+										<p class="pay-f">自购</p>
+									</li>
+									<li>
+										<p class="pay-z">已支付</p>
+										<a class="n-money">￥ 800</a>
+									</li>
+
+								</ul>
+
+						
+
+						</div>
+						<div class="btn">删除</div>
+					</li>
+					
+					
+					<li id="li" class="list-li">
+						<div class="con">
+
+							
+								<img class="list-img" src="vipcenter/viparea/tu2.png" />
+							
+								<ul class="list1">
+									<li>
+										<a class="time">2016-1-1 11:20</a>
+									</li>
+									<li><span class="intro">缅甸和田籽翠绿玉石绿松石绿松石绿松石...
+                        	</span></li>
+									<li>
+										<a class="money">￥ 800</a>
+									</li>
+									<li>
+										<p class="pay-f">自购</p>
+									</li>
+									<li>
+										<p class="pay-z">已支付</p>
+										<a class="n-money">￥ 800</a>
+									</li>
+
+								</ul>
+
+						
+
+						</div>
+						<div class="btn">删除</div>
+					</li>
+					
+					<li id="li" class="list-li">
+						<div class="con">
+
+							
+								<img class="list-img" src="vipcenter/viparea/tu2.png" />
+							
+								<ul class="list1">
+									<li>
+										<a class="time">2016-1-1 11:20</a>
+									</li>
+									<li><span class="intro">缅甸和田籽翠绿玉石绿松石绿松石绿松石...
+                        	</span></li>
+									<li>
+										<a class="money">￥ 800</a>
+									</li>
+									<li>
+										<p class="pay-f">自购</p>
+									</li>
+									<li>
+										<p class="pay-z">已支付</p>
+										<a class="n-money">￥ 800</a>
+									</li>
+
+								</ul>
+
+						
+
+						</div>
+						<div class="btn">删除</div>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/goto.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				var initX; //触摸位置
+				var moveX; //滑动时的位置
+				var X = 0; //移动距离
+				var objX = 0; //目标对象位置
+				window.addEventListener('touchstart', function(event) {
+					
+					var obj = event.target.parentNode.parentNode.parentNode;
+					if(obj.className == "list-li") {
+						initX = event.targetTouches[0].pageX;
+						objX = (obj.style.WebkitTransform.replace(/translateX\(/g, "").replace(/rem\)/g, "")) * 1;
+					}
+					if(objX == 0) {
+						window.addEventListener('touchmove', function(event) {
+						
+							var obj = event.target.parentNode.parentNode.parentNode;
+							if(obj.className == "list-li") {
+//								alert(1)
+								moveX = event.targetTouches[0].pageX;
+								X = moveX - initX;
+								if(X >= 0) {
+									obj.style.WebkitTransform = "translateX(" + 0 + "rem)";
+								} else if(X < 0) {
+									var l = Math.abs(X);
+									obj.style.WebkitTransform = "translateX(" + -l + "rem)";
+									if(l > 1.20) {
+										l = 1.20;
+										obj.style.WebkitTransform = "translateX(" + -l + "rem)";
+									}
+								}
+							}
+						});
+					} else if(objX < 0) {
+						window.addEventListener('touchmove', function(event) {
+							
+							var obj = event.target.parentNode.parentNode.parentNode;
+							if(obj.className == "list-li") {
+//								alert(1)
+								moveX = event.targetTouches[0].pageX;
+								X = moveX - initX;
+								if(X >= 0) {
+									var r = -1.20 + Math.abs(X);
+									obj.style.WebkitTransform = "translateX(" + r + "rem)";
+									if(r > 0) {
+										r = 0;
+										obj.style.WebkitTransform = "translateX(" + r + "rem)";
+									}
+								} else { //向左滑动
+									obj.style.WebkitTransform = "translateX(" + -1.20 + "rem)";
+								}
+							}
+						});
+					}
+
+				})
+			
+			})
+		</script>
+	</body>
+
+</html>

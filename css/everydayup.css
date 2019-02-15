@@ -1,0 +1,270 @@
+				.box {
+					width: 7.5rem;
+					height: 13.34rem;
+					background: rgba(237, 237, 237, 1);
+				}
+				
+				.top {
+					width: 7.5rem;
+					height: 0.88rem;
+					background: rgba(0, 170, 255, 1);
+					display: flex;
+					flex-flow: row wrap;
+				}
+				
+				.return-img {
+					width: 0.25rem;
+					height: 0.44rem;
+					margin: 0.22rem 0rem;
+					margin-left: 0.3rem;
+				}
+				
+				.vip-N {
+					font-size: 0.36rem;
+					font-family: SourceHanSansCN-Regular;
+					margin: 0.2rem 2.5rem;
+					color: rgba(255, 255, 255, 1);
+				}
+				
+				.gm-img {
+					width: 0.37rem;
+					height: 0.38rem;
+					margin-top: 0.26rem;
+				}
+				
+				.container {
+					position: relative;
+					width: 7.5rem;
+					height: 12.42rem;
+					background: rgba(255, 255, 255, 1);
+				}
+				
+				.icon {
+					width: 0.39rem;
+					height: 0.39rem;
+					left: 0.2rem;
+					top: 0.24rem;
+					position: absolute;
+					
+				}
+				
+				.freejf,
+				.numb,
+				.viprank {
+					font-size: 0.24rem;
+					font-family: SourceHanSansCN-Regular;
+					font-weight: 400;
+					color: rgba(102, 102, 102, 1);
+					position: absolute;
+					top: 0.3rem;
+				}
+				
+				.freejf {
+					left: 0.84rem;
+				}
+				.numb{
+					left:1.85rem;
+				}
+				.viprank {
+					position: absolute;
+					left: 6.25rem;
+				}
+				
+				.f-text {
+					font-size: 0.24rem;
+					font-family: SourceHanSansCN-Regular;
+					font-weight: 400;
+					color: rgba(102, 102, 102, 1);
+					position: absolute;
+					top: 1.2rem;
+					left: 0.24rem;
+				}
+				
+				.input-num {
+					width: 5rem;
+					height: 0.6rem;
+					background: #EDEDED;
+					border-radius: 10px;
+					color: #999999;
+					position: absolute;
+					font-size: 0.24rem;
+					top: 1.03rem;
+					left: 1.35rem;
+					border: 0;
+				}
+				
+				.bei {
+					font-size: 0.18rem;
+					font-family: SourceHanSansCN-Regular;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+					position: absolute;
+					top: 1.69rem;
+					left: 1.53rem;
+				}
+				
+				.f3-text {
+					font-size: 0.24rem;
+					font-family: SourceHanSansCN-Regular;
+					font-weight: 400;
+					color: rgba(102, 102, 102, 1);
+					position: absolute;
+					top: 2.27rem;
+					left: 0.21rem;
+				}
+				
+				.f3-input-num {
+					width: 5rem;
+					height: 0.6rem;
+					background: #EDEDED;
+					border-radius: 10px;
+					color: #999999;
+					position: absolute;
+					font-size: 0.24rem;
+					top: 2.11rem;
+					left: 1.35rem;
+					border: 0
+				}
+				
+				.f3-bei {
+					font-size: 0.18rem;
+					font-family: SourceHanSansCN-Regular;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+					position: absolute;
+					top: 2.77rem;
+					left: 1.6rem;
+					
+				}
+.all{
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	margin-left: 0.19rem;
+}
+
+.ytq{
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	margin-left: 0.79rem;
+}
+.ktq{
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	margin-left: 0.62rem;
+}
+.all-num{font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	top: 4.83rem;
+	left: 0.7rem;}
+.ytq-num{font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	top: 4.83rem;
+	left: 2.9rem;
+}
+.ktq-num{font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+	top: 4.83rem;
+	left: 4.65rem;
+}
+.button{
+	width:7.5rem;
+height:0.8rem;
+background:rgba(153,153,153,1);
+text-align: center;
+font-size:0.3rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(255,255,255,1);
+position: absolute;
+bottom: 0;
+}
+.f5{position: relative;top:3.5rem;}
+.mart25{margin-top: 0.25rem;}
+.jiesao{font-size:0.18rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(153,153,153,1);
+margin-top: 0.27rem;
+margin-left: 0.24rem;}
+/*.info-top{
+	width: 7.5rem;
+	height:9.75rem;
+	background:rgba(0,0,0,1);
+opacity:0.5;
+}
+.info-con{
+	width: 7.5rem;
+	height:3.59;
+}
+.inbox{
+	width: 7.5rem;
+	height: 13.34rem;
+	position: absolute;
+	top:0rem;
+}
+.con-info{
+	width: 7.5rem;
+	height:3.59rem;
+}
+.info-con{
+	width: 7.5rem;
+	height:3.59rem;
+	background:rgba(255,255,255,1);
+}
+.con-button{
+	width: 7.5rem;
+	height: 0.8rem;
+	background:rgba(230,0,45,1);
+}
+.qd{
+	font-size:0.3rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(255,255,255,1);
+padding-top:0.26rem;
+text-align: center;
+}
+.con-info-box{
+	width: 7.5rem;
+	height:3.59rem;
+	background:rgba(255,255,255,1);
+}
+.c1{margin-top: 0.21rem;}
+.c2{margin-top: 0.31rem;}
+.c3{margin-top: 0.31rem;}
+.c4{margin-top: 0.31rem;}
+.c1 img{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin-left:5.48rem;
+}
+.c1 span{
+	font-size:0.3rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+
+margin-left: 0.21rem;
+}
+.c2,.c3,.c4 span{
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(102,102,102,1);
+}
+.c2,.c3,.c4 span:nth-child(1){
+	margin-left: 0.23rem;
+}*/
+

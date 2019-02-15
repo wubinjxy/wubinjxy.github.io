@@ -1,0 +1,179 @@
+			div,
+			a,
+			p,
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			li {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.box {
+				width: 7.5rem;
+				height: 13.34rem;
+				background: rgba(237, 237, 237, 1);
+			}
+			
+			.top {
+				width: 7.5rem;
+				height: 0.88rem;
+				background: rgba(0, 170, 255, 1);
+				display: flex;
+				flex-flow: row wrap;
+			}
+			
+			.return-img {
+				width: 0.25rem;
+				height: 0.44rem;
+				margin: 0.22rem 0rem;
+				margin-left: 0.3rem;
+			}
+			
+			.vip-N {
+				font-size: 0.36rem;
+				font-family: SourceHanSansCN-Regular;
+				margin: 0.2rem 2.58rem;
+				color: rgba(255, 255, 255, 1);
+			}
+			
+			.container {
+				display: flex;
+				flex-flow: column nowrap;
+			}
+			
+			.list {
+				width: 7.5rem;
+				height: 2rem;
+				background: rgba(255, 255, 255, 1);
+				margin-bottom: 0.3rem;
+				display: flex;
+				flex-flow: row nowrap;
+			}
+			
+			.list-left {
+				width: 1.60rem;
+				height: 1.60rem;
+				margin-left: 0.2rem;
+				margin-top: 0.2rem;
+			}
+			
+			.list-img {
+				width: 1.6rem;
+				height: 1.6rem;
+				border-radius: 5px;
+			}
+			
+			.list-right {
+				margin-left: 0.2rem;
+				margin-top: 0.2rem;
+				width: 5.5rem;
+				height: 1.6rem;
+			}
+			
+			
+			
+			.list1 li {
+				height: 0.32rem;
+				display: flex;
+				flex-flow: row nowrap;
+				width: 5.5rem;
+					margin-top: 0.1rem;
+			}
+			
+			.time {
+				font-size: 0.18rem;
+				font-family: SourceHanSansCN-Regular;
+				font-weight: 400;
+				color: rgba(153, 153, 153, 1);
+			}
+			
+			.intro {
+				font-size: 0.18rem;
+				font-family: SourceHanSansCN-Regular;
+				font-weight: 400;
+				color: rgba(102, 102, 102, 1)
+			}
+			
+			.money {
+				font-size: 0.24rem;
+				font-family: SourceHanSansCN-Medium;
+				font-weight: 500;
+				color: rgba(230, 0, 45, 1);
+			}
+			
+			.pay-f,
+			.pay-z {
+				font-size: 0.18rem;
+				font-family: SourceHanSansCN-Regular;
+				font-weight: 400;
+				color: rgba(153, 153, 153, 1);
+			}
+			
+			.n-money {
+				font-size: 0.18rem;
+				font-family: SourceHanSansCN-Regular;
+				font-weight: 400;
+				color: rgba(230, 0, 45, 1);
+			}
+			
+			.list {
+				position: relative;
+				overflow: hidden;
+				z-index: 100;
+			}
+			
+			.list-ul {
+				overflow: hidden
+			}
+			
+			.list-li {
+				margin-bottom: 0.02rem;
+				position: relative;
+				width: 7.5rem;
+				height: 2rem;
+				background: rgba(255, 255, 255, 1);
+				z-index: 100;
+			
+			}
+			
+			.btn {
+				position: absolute;
+				top: 0;
+				right: -1.3rem;
+				text-align: center;
+				width: 1.3rem;
+				height: 1.18rem;
+				padding-top: 0.82rem;
+				background: rgba(102, 102, 102, 1);
+				font-size: 0.24rem;
+				font-family: SourceHanSansCN-Regular;
+				font-weight: 400;
+				color: rgba(255, 255, 255, 1)
+			}
+			
+			.con {
+				width: 7.5rem;
+				height: 0.88rem;
+				
+			}
+			
+			.list-img {
+				position: absolute;
+				left: 0.21rem;
+    top: 0.23rem;
+			}
+			
+			.list1 {
+				position: absolute;
+				left: 2rem;
+				top: 0;
+			}

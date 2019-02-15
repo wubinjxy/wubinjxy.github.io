@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+			<link rel="stylesheet" type="text/css" href="css/vip_buy.css"/>
+			<link rel="stylesheet" type="text/css" href="css/comm.css"/>
+	</head>
+	<body>
+	
+			
+		
+		<div class="box">
+			<div class="top-box">
+				<img class="goto" src="vipcenter/index/comeback.png" index="tuijian.html"/>
+				<img src="vipcenter/viparea/tu2.png" class="top_img"/>
+				<div class="top-intro">
+					<p class="intro">缅甸和田籽翠绿玉石...</p>
+					<p class="money">￥ 800</p>
+				</div>
+			</div>
+			<div class="bottom-box">
+				<span class="text">支付方式</span>
+				<div class="bottom-box-top">
+					<div class="bottom-box-top-text">
+						<p>方式1</p>
+						<p>方式2(自由积分）</p>
+						<p>方式3(奖励积分）</p>
+					</div>
+					
+					<div class="bottom-box-top-button">
+						<div class="bottom-box-top-button-left default"><span class="s-text">¥ 880</span></div>
+						<div class="bottom-box-top-button-right">
+                           <span class="s-text"> ¥ 440  +440</span>
+                        
+                        </div>
+                        <div class="bottom-box-top-button-right">
+                           <span class="s-text"> ¥ 440  +440</span>
+                        
+                        </div>
+					</div>
+				</div>
+				<span class="text">购买形式</span>
+				<div class="bottom-box-mid">
+					<div class="bottom-box-mid-text">
+						<span class="sp ">自购</span> <span class="spp">代购</span>
+					</div>
+					
+					<div class="bottom-box-mid-button">
+						<div class="bottom-box-mid-button-left default"><span class="s-text">自购</span></div>
+						<div class="bottom-box-mid-button-right">
+                           <p class="uid">UID  ：xxxxxxxxx</p>
+                           <p class="ph">电话：###########</p>
+                        
+                        </div>
+					</div>
+					
+				</div>
+				
+				<div class="mid">
+					<span class="text">收货地址</span>
+				<span class="ss">添加</span>
+				</div>
+				
+				<div class="bottom-box-bot">
+					<div class="bottom-box-bot-text">
+						<label class="user">收货人:</label><input type="text" class="user-name" />
+						<label class="phone">电话:</label><input type="text" class="user-ph" />
+					</div>
+					
+					<div class="bottom-box-bot-button">
+						
+                          <input type="text" class="adress" placeholder="输入详细地址"/>
+                        
+                        
+					</div>
+					
+					
+					
+				</div>
+				<button class="button" type="button">购买</button>
+			</div>
+			<!--<!--<!--自购or代购-->
+			<div class="dd-info">
+				<div class="info1">
+					<p class="info-name">订单详情</p>
+					<img class="back" src="vipcenter/teamcount/err.png"/>
+				</div>
+				<div class="goods">
+					
+					<img class="goods-img" src="vipcenter/viparea/tu2.png"/>
+					
+					<div class="info3">
+						<p class="d-jieshao">缅甸和田籽翠绿雕刻玉石 观音大士赏荷图雕塑</p>
+						<p class="d-money">¥：880</p>
+					</div>
+					
+				</div>
+				
+				<div class="info2">
+					<p class="pf">支付方式</p>
+					<p class="fs">方式1</p>
+					
+					<p class="pf mrt41">购买形式</p>
+					<p class="fs">代购</p>
+				
+					<div class="user-info1">
+						<ul>
+							<li><span class="yihang">UID：bbbbb1145</span> <span class="yihang1">   电话：12312131232</p></li>
+							<li><p class="pf mrt41">收货地址</p></li>
+							<li></li>
+							<li><p class="fs">老黄  123123123</p></li>
+							<li><p class="fs">广东省深圳市龙岗区南湾街道办星际中心3号楼613</p></li>
+						</ul>			
+					</div>
+                            
+      
+                    <button class="qdpay">确认购买</button>    
+				</div>
+			</div>
+			<!--支付方式选择-->
+			<div class="zhifufangshi">
+				<div class="top">
+					
+				</div>
+				<div class="bottom">
+					<div class="info1">
+					<p class="info-name">支付选择</p>
+					<img class="back back1" src="vipcenter/teamcount/err.png"/>
+					</div>
+					<div class="pag-img">
+						<img class="pag-img-size" src="vipcenter/owncount/wx.png"/>
+						<img class="pag-img-size marl287"  src="vipcenter/owncount/zfb.png"/>
+					</div>
+					<span class="wx">微信支付</span><span class="zfb marl269">支付宝支付</span>
+				</div>
+			</div>
+		
+			
+			
+			</div>
+		
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/goto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var r=0;
+	var e=0;
+	var d=0;
+	var c=0
+var user=$(".user-name")
+var phone=$(".user-ph")
+var adress=$(".adress")
+var button=$(".button")
+var button1=$(".qdpay")
+var close=$(".back")
+var close1=$(".back1")
+var dd=$(".dd-info");
+user.bind().blur(function(){
+	
+	if(user.val().length!=0){
+	r=1
+	ok(r)	
+	}
+	
+
+})
+phone.bind().blur(function(){
+	e=1
+	ok(e)
+})
+adress.bind().blur(function(){
+	if(adress.val().length!=0){
+		d=1
+	ok(d)
+	}
+
+	
+})
+function ok(z){
+	
+	
+	c+=z;
+	console.log(c)
+	if(c==3){
+		button.attr("disabled",true)
+		button.addClass('on')
+
+	}
+}
+button.bind().click(function(){
+	
+	dd.css("display","block")
+	
+})
+close.bind().click(function(){
+	dd.css("display","none")
+})
+
+button1.bind().click(function(){
+	dd.css("display","none")
+	$(".zhifufangshi").css("display","block")
+	
+})
+close1.bind().click(function(){
+	$(".zhifufangshi").css("display","none")
+})
+
+</script>
+	</body>
+</html>

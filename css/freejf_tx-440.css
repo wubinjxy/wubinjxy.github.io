@@ -1,0 +1,54 @@
+.all {
+	margin-left: 0.2rem;
+}
+
+.ytq {
+	margin-left: 0.5rem;
+}
+
+.ktq {
+	margin-left: 0.5rem;
+}
+
+.all-num {
+	top: 4.83rem;
+	left: 0.7rem;
+}
+.numb{
+					left:2rem;
+				}
+.ytq-num {
+	top: 4.83rem;
+	left: 2.9rem;
+}
+
+.ktq-num {
+	top: 4.83rem;
+	left: 4.65rem;
+}
+
+.input-num {
+	width: 5rem;
+	height: 0.6rem;
+	background: #EDEDED;
+	border-radius: 10px;
+	color: #999999;
+	position: absolute;
+	font-size: 0.24rem;
+	top: 1.03rem;
+	left: 1.5rem;
+	border: 0
+}
+
+.f3-input-num {
+	width: 5rem;
+	height: 0.6rem;
+	background: #EDEDED;
+	border-radius: 10px;
+	color: #999999;
+	position: absolute;
+	font-size: 0.24rem;
+	top: 2.11rem;
+	left: 1.5rem;
+	border: 0
+}

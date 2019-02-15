@@ -1,0 +1,96 @@
+
+	.vip-name {
+		width: 7.5rem;
+		height: 0.88rem;
+		background: rgba(0, 170, 255, 1);
+		display: flex;
+		flex-flow: row wrap;
+	}
+	
+	.return-img {
+		width: 0.25rem;
+		height: 0.44rem;
+		margin: 0.22rem 0rem;
+		margin-left: 0.3rem;
+	}
+	
+	.buy-img {
+		width: 0.45rem;
+		height: 0.42rem;
+		margin-top: 0.24rem;
+	}
+	
+	.vip-N {
+		font-size: 0.36rem;
+		font-family: SourceHanSansCN-Regular;
+		margin: 0.28rem 2.58rem;
+		color: rgba(255, 255, 255, 1);
+	}
+	
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		flex-direction: row;
+	}
+	
+	.goods {
+		width: 2.2rem;
+		height: 3.3rem;
+		background: rgba(237, 237, 237, 1);
+		border-radius: 5px;
+		margin-top: 0.2rem;
+		margin-left: 0.2rem;
+	}
+	
+	.goods img {
+		width: 2.2rem;
+		height: 2.5rem;
+	}
+	.oldmoney{
+font-size:0.18rem;
+font-family:SourceHanSansCN-Medium;
+font-weight:500;
+color:rgba(153,153,153,1);
+margin-top: 0.17rem;
+margin-left: 0.14rem;
+/*opacity: 0;*/
+
+	}
+	.zk{
+		width:0.5rem;
+height:0.25rem;
+background:rgba(237,237,237,1);
+border:0.01rem solid rgba(230,0,45,1);
+border-radius:0.13rem;
+font-size:0.18rem;
+font-family:SourceHanSansCN-Bold;
+font-weight:bold;
+padding:0.02rem;
+
+color:rgba(230,0,45,1);}
+
+
+
+
+
+	
+	
+	.text {
+		width: 1.96rem;
+		height: 0.25rem;
+		overflow: hidden;
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+		font-size: 0.2rem;
+		margin-top: 0.1rem;
+		margin-left: 0.1rem;
+	}
+	
+	.money {
+		color: red;
+		font-size: 0.24rem;
+		margin-top: 0.13rem;
+		margin-left: 0.11rem;
+	}

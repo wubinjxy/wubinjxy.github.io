@@ -1,0 +1,53 @@
+.user-info li:nth-child(3) {
+	margin-top: 0.15rem;
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.team-info li:nth-child(3) {
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	margin-top: 0.15rem;
+}
+
+.uselist li:nth-child(1) {
+	margin-top: 0.05rem;
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.uselist li:nth-child(2) {
+	margin-top: 0.1rem;
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.uselist li:nth-child(3) {
+	margin-top: 0.1rem;
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.user-info li:nth-child(4),
+.uselist li:nth-child(4) {
+	font-size: 0.2rem;
+	font-family: SourceHanSansCN-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+.bottom-box-img p{
+	margin: 0.22rem 0 0 0.7rem;
+}
+.bottom-box-img p:nth-child(3){
+	margin: 0.22rem 0 0 0.6rem;
+}

@@ -1,0 +1,65 @@
+.box {
+	width: 7.5rem;
+	height: 13.34rem;
+	background: rgba(237, 237, 237, 1);
+}
+
+.integral {
+	width: 7.5rem;
+	height: 0.88rem;
+	background: rgba(0, 170, 255, 1);
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.return-img {
+	width: 0.25rem;
+	height: 0.44rem;
+	margin: 0.22rem 0rem;
+	margin-left: 0.3rem;
+}
+
+.vip-N {
+	font-size: 0.36rem;
+	font-family: SourceHanSansCN-Regular;
+	margin: 0.28rem 2rem;
+	color: rgba(255, 255, 255, 1);
+}
+.list li{
+	width:7.5rem;
+height:0.88rem;
+background:rgba(255,255,255,1);
+margin-bottom: 0.1rem;
+}
+.img{
+	width:0.4rem;
+height:0.42rem;
+margin-top:0.22rem;
+margin-left:0.22rem;
+}
+.list li:nth-child(1) span{
+	display: inline-block;
+	margin-top: 0.32rem;
+	margin-left: 0.15rem;
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+}
+.list li:nth-child(2) span{
+	display: inline-block;
+	margin-top: 0.32rem;
+	margin-left: 0.15rem;
+	font-size:0.24rem;
+font-family:SourceHanSansCN-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+}
+
+.list li:nth-child(2) span:nth-child(3){
+color:rgba(0,170,255,1);
+margin-left: 3.5rem;
+}
+
+
+

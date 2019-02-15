@@ -1,0 +1,54 @@
+.box{
+	background: url(../img/bj1.png) no-repeat 100% 100%;
+	width:7.5rem;
+height:13.34rem;
+}
+.xitong{
+	font-size:0.6rem;
+
+color:rgba(255,228,2,1);
+padding-top: 2.15rem;
+margin-left: 2.19rem;
+}
+.dream{
+	font-size:0.36rem;
+margin-top: 0.41rem;
+margin-left: 1.86rem;
+color:rgba(255,228,2,1);
+}
+.quan{
+	position: relative;
+	top: 1.18rem;
+	left: 0.39rem;
+	width:6.47rem;
+height:3.38rem;
+border:1px solid rgba(241,145,73,1)
+
+}
+.quan2{
+	position: relative;
+	left: 0.36rem;
+	top: -0.29rem;
+	width:6.47rem;
+height:3.38rem;
+border:0.01rem solid rgba(255,228,2,1);
+}
+.zhuce{
+	width:6.5rem;
+height:0.88rem;
+background:rgba(144,16,26,1);
+border-radius:0.1rem;
+font-size:0.36rem;
+
+color:rgba(255,255,255,1);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 0.5rem;
+margin-top: 3.5rem;
+}
+.quan2 p{
+	font-size: 0.24rem;
+	color: #FFE402;
+	margin-top: 0.3rem;
+}

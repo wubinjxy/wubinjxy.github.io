@@ -1,0 +1,63 @@
+				.box {
+					width: 7.5rem;
+					height: 13.34rem;
+					background: rgba(237, 237, 237, 1);
+				}
+				
+				.top {
+					width: 7.5rem;
+					height: 0.88rem;
+					background:rgba(45,45,58,1);
+					display: flex;
+					flex-flow: row wrap;
+				}
+				
+				.return-img {
+					width: 0.25rem;
+					height: 0.44rem;
+					margin: 0.22rem 0rem;
+					margin-left: 0.3rem;
+				}
+				
+				.vip-N {
+					font-size: 0.36rem;
+					
+					margin: 0.2rem 2.4rem;
+					color: rgba(255, 255, 255, 1);
+				}
+				
+				.container {
+					display: flex;
+					flex-flow: column nowrap;
+					padding: 0.2rem;
+				}
+				.queding{
+	width:7.1rem;
+height:0.88rem;
+background:rgba(144,16,26,1);
+border-radius:0.1rem;
+font-size:0.3rem;
+margin-top: 0.5rem;
+color:rgba(255,255,255,1);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+				.in-txjf{
+					width:7rem;
+height:1.5rem;
+background:rgba(211,219,255,1);
+border:0.01rem solid ;
+border-radius:0.1rem;
+font-size: 0.3rem;
+ padding-left: 0.1rem;
+
+
+				}
+		  input::-webkit-input-placeholder {
+            color: white;
+            opacity: 1;
+         
+        }
+				
+				
