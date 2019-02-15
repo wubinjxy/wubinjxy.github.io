@@ -88,28 +88,14 @@ body {
 	border-top-right-radius: 0.6rem;
 }
 
-.uselist span{margin-left: 1.1rem;
+.uselist p{margin-left:0.7rem;
 font-size:0.2rem;
 font-family:SourceHanSansCN-Regular;
 font-weight:400;
 color:rgba(255,255,255,1);
-}
-.uselist a{
-font-size:0.2rem;
-font-family:SourceHanSansCN-Regular;
-font-weight:400;
-color:rgba(255,255,255,1);
+line-height: 0.4rem;
 }
 
-.uselist li:nth-child(1){
-	margin-top: 0.1rem;
-}
-.uselist li:nth-child(2){
-	margin-top: 0.21rem;
-}
-.uselist li:nth-child(3){
-	margin-top: 0.18rem;
-}
 .shuju{font-size: 0.2rem;
 	color:#FFFFFF}
 .ownjf{font-size: 0.2rem;
