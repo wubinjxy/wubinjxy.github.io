@@ -115,7 +115,7 @@ body {
         	}
         	.info th{
         		border: 1px solid;
-        		color: cadetblue;
+        		/*color: cadetblue;*/
         		
         	}
         		.l{
@@ -213,6 +213,7 @@ body {
         		.r{width: 100%;}
         		.rl{
         			width: 100%;
+        			border: 0;
         		}
         		.rr{
         			width: 100%;
