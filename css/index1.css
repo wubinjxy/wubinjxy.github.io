@@ -50,14 +50,23 @@ body {
         		content: "\039E";
         	}
         	.content .wenzi{
-        		text-align: center;
+        		
+        		text-align: center ;
         		border: 1px solid;
         		width: 200px;
         		font-size: 30px;
         		margin: auto;
         		font-weight: 100;
         		line-height: 60px;
+        		
         	}
+        	.gone{
+        		right: -50px;
+        	}
+        	.visible{
+        		right: 70px;
+        	}
+        	
         	
         	.dw{
         		position: relative;
