@@ -266,6 +266,10 @@ body {
         			border-right: 1px solid #e1e1e1;
         			border-left: 1px solid #e1e1e1;
         		}
+        		.zh{
+        			margin: 0;
+        			width: 100%;
+        		}
         	}
         	html, body { scroll-behavior:smooth; }
         	#touxiang{
@@ -275,4 +279,8 @@ body {
         	p{
         		margin: 0;
         		padding: 0;
+        	}
+        	.kz{
+        		width: 70%;
+        		margin: 0 auto;
         	}
