@@ -293,10 +293,20 @@
 <!-- 引入组件库 -->
 <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-		
-		<script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			$("nav i").click(function() { //显示或隐藏下方导航列表
+<script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data:{
+					items:[
+					{src:'img/hy.jpg'},
+					{src:'img/zz.jpg'},
+					{src:'img/hyy.jpg'},
+					{src:'img/mr.jpg'},
+					]
+				},
+				mounted:function(){
+						$("nav i").click(function() { //显示或隐藏下方导航列表
 				$("nav ul").slideToggle(100);
 			});
 			$("nav li").click(function() {
@@ -331,14 +341,13 @@
 	   
 		$('.totop').click(function(){
 			$('html, body').animate({scrollTop:0}, 300);
+//			alert(1)
 			return false;
 		});
    
    }
    	handleBackToTop()
-/* ==========================================================================
-   showHidebackToTop
-   ========================================================================== */	
+
 	
 	function showHidebackToTop() {
 		$(window).bind("scroll", function () {
@@ -362,21 +371,13 @@
 	}
 	showHidebackToTop()
 	
-		</script>
-	
-	
-	
-	
-	<script type="text/javascript">
-			new Vue({
-				el:'#app',
-				data:{
-					items:[
-					{src:'img/hy.jpg'},
-					{src:'img/zz.jpg'},
-					{src:'img/hyy.jpg'},
-					{src:'img/mr.jpg'},
-					]
 				}
 			})
 		</script>
+		
+		
+		
+	
+	
+	
+	
