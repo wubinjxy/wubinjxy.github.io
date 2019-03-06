@@ -193,12 +193,16 @@ body {
         			top: 80px;
         			display: none;
         		}
-        		nav ul li{display: block;
+        		nav ul li{
+        		display: block;
         		width:100%;
         		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
         		text-align: right;
         		
         		}
+        		
+        		
+        		
         		nav ul li a{
         			width: 100%;
         			margin-right: 20px;
@@ -286,4 +290,28 @@ body {
         		width: 70%;
         		margin: 0 auto;
         	}
-        	.w{}
+        	.gongzuo{
+        		position: relative;
+        	}
+        	.gongzuo:hover .xiala ul{
+        		display: block !important;
+        	}
+        	.xiala{
+        		width: 100%;
+        		position: absolute;
+        	}
+        	nav .xiala ul{
+        		margin: 0;
+        		padding: 0;
+        		display: none !important;
+        		
+        	}
+        	.xiala ul li{
+        		border-bottom: 1px solid black;
+        		border-top: 1px solid black;
+        		
+        		
+        	}
+        	.xiala ul li a{
+        		line-height: 44px;
+        	}
