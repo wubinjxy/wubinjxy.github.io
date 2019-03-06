@@ -55,6 +55,7 @@ body {
         		border: 1px solid;
         		width: 200px;
         		font-size: 30px;
+        		line-height: 50px !important;
         		margin: auto;
         		font-weight: 100;
         		line-height: 60px;
@@ -105,6 +106,7 @@ body {
         	.biaoti span{
         		width: 100px;
         		background-color: white;
+        		font-size: 8px;
         	}
         	.clera:before,.clera:after{
         		content: "";
@@ -284,3 +286,4 @@ body {
         		width: 70%;
         		margin: 0 auto;
         	}
+        	.w{}

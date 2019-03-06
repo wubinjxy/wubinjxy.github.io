@@ -42,6 +42,9 @@
 				<li  class="xq">
 					<a href="#xq">兴趣爱好</a>
 				</li>
+				<li>
+					<a href="index_phone1.html">工作作品</a>
+				</li>
 
 			</ul>
 			<i></i>
@@ -127,42 +130,39 @@
 				</div>
 			</div>
 			</div>
-			<div class="wide clera" id="gz" style="padding-top: 50px;">
+			<div class="wide clera" id="gz" style="padding-top: 50px;" v-for="(con,index) in content" >
 
 				<div class="dw clera">
 
 					<p class="biaoti">
-						<span style="background-color: #f6f6f6;">社会上摸爬滚打那几年</span>
+						<span style="background-color: #f6f6f6;">{{con.title1}}</span>
 					</p>
 					<h1 class="wenzi">
         		
-        		工作经历
+        		{{con.title2}}
         	</h1>
 				</div>
 				<div class="row clera" style="padding-top: 50px; border-bottom: 1px solid #e1e1e1; padding-bottom: 10px;">
 					<div class="rl">
 
 						<h1>
-        				<span style="position: relative;">2018 	<small style="font-size: 12px; position: absolute;top:-18px; left: 0;">十一月</small></span>
-        				-<span style="position: relative;">2019<small style="font-size: 12px; position: absolute;top:-18px; left:0;">一月</small></span>
+        				<span style="position: relative;">{{con.time1}} 	<small style="font-size: 12px; position: absolute;top:-18px; left: 0;">{{con.time3}} </small></span>
+        				-<span style="position: relative;">{{con.time2}} <small style="font-size: 12px; position: absolute;top:-18px; left:0;">{{con.time4}} </small></span>
         		
         			
         			</h1>
-						<p>公司名称：深圳必亚区块链有限公司</p>
+						<p>{{con.company}}</p>
 						<hr style="border: 0.5px solid #e1e1e1; width: 90%; float: left; clear: left;">
-						<p class="clera" id="zhiwei">职位：web前端实习生</p>
+						<p class="clera" id="zhiwei">{{con.zhiwei}}</p>
 
 					</div>
-					<div class="rr">
+					<div class="rr" v-for="list in litss">
 						<div class="" style="margin-left: 20px;">
 							
-					<h3>工作内容</h3>
+					<h3>{{list.title}}</h3>
 							<ul class="list1" style="font-size: 12px;">
 							
-							<li>1.人员编制：公司总人数60~80人，研发总人数8人，前端总人数2人。 </li>
-							<li>1.完成静态页面并且兼容各个浏览器和设备--><a href="index_phone1.html">移动rem适配</a></--></li>
-							<li>2.使用git工具拉下来代码，并修改</li>
-							<li>4. 相关技术栈：jQuery，Bootstrap等。</li>
+							<li>{{list.li}}</li>
 							
 							
 
@@ -174,36 +174,36 @@
 
 			</div>
 
-			<div class="wide clera" id="jy" style="padding-top: 50px; background-color: white;">
+			<div class="wide clera" v-for="con in content1" id="jy" style="padding-top: 50px; background-color: white;">
 				<div class="dw clera">
 
 					<p class="biaoti">
-						<span style="background-color: #f6f6f6;">半个好学生</span>
+						<span style="background-color: #f6f6f6;">{{con.title2}}</span>
 					</p>
 					<h1 class="wenzi">
         		
-        					教育经验
+        					{{con.title1}}
         				</h1>
 				</div>
 
 				<div class="row clera" style="padding-top: 50px; border-bottom: 1px solid #e1e1e1; padding-bottom: 10px;">
 					<div class="rl">
 						<h1>
-        				<span style="position: relative;">2018 	<small style="font-size: 12px; position: absolute;top:-18px; left: 0;">十一月</small></span>
-        				-<span style="position: relative;">2019<small style="font-size: 12px; position: absolute;top:-18px; left:0;">一月</small></span>
+        				<span style="position: relative;">{{con.time1}} 	<small style="font-size: 12px; position: absolute;top:-18px; left: 0;">{{con.time3}} </small></span>
+        				-<span style="position: relative;">{{con.time2}} <small style="font-size: 12px; position: absolute;top:-18px; left:0;">{{con.time4}} </small></span>
         		
         			
         			</h1>
-						<p>学校名称：湖南省信息技术职业学院</p>
+						<p></p>
 						<hr style="border: 0.5px solid #e1e1e1; width: 90%; float: left; clear: left;">
-						<p class="clera" id="zhiwei">文艺青年</p>
+						<p class="clera" id="zhiwei">{{con.zhiwei}}</p>
 
 					</div>
 					<div class="rr">
 						<div class="" style="margin-left: 20px;">
 							
 					
-						<h3>湖南信息技术职业学院</h3>
+						<h3>{{con.company}}</h3>
 						<p style="letter-spacing: 2px;">
 							<a href="http://www.hniu.cn/">湖南信息技术职业学院</a>是一所综合性的湖南省属专科学校，始建于1953年，学校坐落于历史文化名城、世界著名的风景游览胜地－湖南长沙市。 主修课程：C++程序设计、Java程序设计、Web应用开发、手机软件开发、计算机网络原理、操作系统原理、数据库原理及应用、数据结构、高等数学、离散数学等
 						</p>
@@ -303,6 +303,22 @@
 					{src:'img/zz.jpg'},
 					{src:'img/hyy.jpg'},
 					{src:'img/mr.jpg'},
+					],
+					content:[
+					{title1:'工作经历',title2:'社会上摸爬滚打那几年',time1:'2018',time2:'2019',time3:'十一月',time4:'一月',company:'公司名称：深圳必亚区块链有限公司',zhiwei:'职位：web前端实习生',classid:0},
+					],
+					content1:[
+					{title1:'教育经验',title2:'半个好学生',time1:'2018',time2:'2019',time3:'十一月',time4:'一月',company:'学校名称：湖南省信息技术职业学院',zhiwei:'文艺青年',classid:0},
+					
+					],
+					litss :[{title:'工作内容'},
+						{li:'1.人员编制：公司总人数60~80人，研发总人数8人，前端总人数2人。'},
+						{li:'2.完成静态页面并且兼容各个浏览器和设备'},
+						{li:'3.使用git工具拉下来代码，并修改'},
+						{li:'4. 相关技术栈：jQuery，Bootstrap等。'},
+					
+					
+						
 					]
 				},
 				mounted:function(){
