@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			* {
+			    margin: 0;
+			    padding: 0;
+			    box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+			}
+			body, html {
+						    margin: 0;
+						    padding: 0;
+						    width: 100%;
+						    height: 100%;
+						}
+			html{
+				    background-color: #f7f7f7;
+			}
+			a{text-decoration: none;color: black;}
+			.bg{
+				width: 100%;
+				max-width: 640px;
+				margin:0 auto;
+				height: 100%;
+				/*background-color: pink;*/
+
+			}
+			#app{ background-color: #f7f7f7;}
+			@font-face {
+				font-family:'iconfont-yd';
+				src: url('https://friend.380star.com/youdian/assets/font/iconfont.woff');
+			}
+			.goods{
+				width: 100%;
+				background-color: #f7f7f7;
+			}
+			.goods img{
+				width: 100%;
+			}
+			.price{
+				 background-image: linear-gradient(90deg, #d0021b 1%, #ebb462 97%);
+				 padding:0 10px ;
+				 margin-top: -4px;
+			}
+			.price p{
+				font-size: 36px;
+				color: #fff;
+				
+			}
+			.price p span{
+				font-size: 24px;
+			}
+			.price s {
+				color: #e3cd9c;
+			}
+			.info{
+				font-size: 24px;
+				line-height: 44px;
+				padding: 0 10px;
+				
+			}
+			.info p:nth-child(2){
+				border: 1px solid red;
+				width: 10%;
+				line-height: 30px;
+				text-align: center;
+				border-radius:5px;
+				color: red;
+			}
+			.sales{
+				color: #b2b2b2;
+				font-size: 16px;
+				line-height: 44px;
+				border-bottom: 1px solid #b2b2b2;
+			}
+			.clearfix:before,.clearfix:after{
+				content: '';
+				display: table;
+			}
+			.clearfix:after{
+				clear: both;
+			}
+			.sales span:nth-child(1){float: left;}
+			.sales span:nth-child(2){float: right;}
+			.xuan{
+				display: -webkit-box;
+				 line-height: 66px;
+				position: relative;
+			}
+			.border-b{
+				  border-bottom: solid 1px #eeeeee;
+			}
+			.xuan-left{
+				color: #9b9b9b;
+				font-size:18px;
+				padding: 0 10px;
+			}
+			.xuan-right{
+				    color: #626262;
+				    font-size: 24px;
+				    padding: 0 10px;
+			}
+			.xuan-right:after{
+				content: '\e642';
+			    font-size: 25px;
+			    font-family: 'iconfont-yd' !important;
+			    font-style: normal;
+			    display: block;
+			    position: absolute;
+			    z-index: 2;
+			    right: 11px;
+			    top: 0%;
+			}
+			.mask{
+				position: fixed;
+				top: 0;
+				background-color: red;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				max-width: 640px;
+				    background-color: rgba(0,0,0,0.6);
+			}
+			.mask3{
+				position: fixed;
+				top: 0;
+				background-color: red;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				max-width: 640px;
+				    background-color: rgba(0,0,0,0.6);
+			}
+			.maskinfo{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 70%;
+				background-color: white;
+				left: 0;
+				bottom: 0;
+				z-index: 101;
+				width: 100%;
+				overflow-y: auto;
+			}
+			.maskinfo a{
+				position: absolute;
+			    right: 10px;
+			    top: 10px;
+			    height: 20px;
+			    width: 20px;
+			    font-size: 22px;
+			    /*line-height: 44px;*/
+			    text-align: center;
+			    color: #b2b2b2
+			}
+			.maskinfo3{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 40%;
+				background-color: white;
+				left: 0;
+				bottom: 0;
+				z-index: 101;
+				width: 100%;
+				overflow-y: auto;
+			}
+			.maskinfo3 a{
+				position: absolute;
+			    right: 10px;
+			    top: 10px;
+			    height: 20px;
+			    width: 20px;
+			    font-size: 22px;
+			    /*line-height: 44px;*/
+			    text-align: center;
+			    color: #b2b2b2
+			}
+			
+			.mask1{
+				position: fixed;
+				top: 0;
+				background-color: red;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				max-width: 640px;
+				    background-color: rgba(0,0,0,0.6);
+			}
+			.mask2{
+				position: fixed;
+				top: 0;
+				background-color: red;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				max-width: 640px;
+				    background-color: rgba(0,0,0,0.6);
+			}
+			
+			.swiper-slide p{
+				  text-overflow: -o-ellipsis-lastline;
+				  overflow: hidden;
+				  text-overflow: ellipsis;
+				  display: -webkit-box;
+				  -webkit-line-clamp: 2;
+				  line-clamp: 2;
+				  -webkit-box-orient: vertical;
+				  padding: 0 10px;
+			}
+			.swiper-wrapper{
+				padding: 10px 10px;
+			}
+			.swiper-slide{
+				border: 1px solid #333;
+			}
+			.swiper-slide img{
+				width: 100%;
+			}
+			.close{
+				display: none;
+			}
+			.canshu ul{
+				width: 100%;
+				padding: 0 20px;
+			}
+			.canshu ul li{
+				width: 100%;display: -webkit-box;
+				line-height: 44px;
+				 border-bottom: solid 1px #eee;;
+			}
+			.canshu ul li:nth-child(2) div:nth-child(1) p{
+				line-height: 25px;
+			}
+			.goodsinfo{
+				/*position: relative;*/
+				width: 100%;
+				/*height: 100%;*/
+				display: -webkit-box;
+				border-bottom: solid 1px #eeeeee;
+			}
+			.goodsinfo img{
+				width: 100%;
+				height: auto;
+			}
+			.goodsinfo-left{
+				max-width:100px;
+				max-height: 100px;
+				padding:10px;
+			}
+			.goodsinfo-right{
+				/*max-width:100px;*/
+				max-height: 100px;
+				padding:10px;
+				line-height:30px;
+			}
+			.goodsinfo-right p:nth-child(1){
+				color: red;
+			}
+			.goodsinfo-right p:nth-child(2),.goodsinfo-right p:nth-child(3){
+				    color: #626262;
+			}
+			.guige{
+				margin-top: 10px;
+			}
+			.guige{
+				width: 100%;
+				padding: 10px;
+			}
+			.guige h4{
+				color:#626262;
+			}
+			.guigex {
+				list-style: none;
+				display: flex;
+				flex-flow: row wrap;
+				width: 100%;
+			}
+			.guigex li{
+				width:100px;
+				color: #333333;
+			    border-radius: 10px;
+			    background-color: #f5f5f5;
+			    height: 30px;
+			    line-height: 30px;
+			    text-align: center;
+			    margin-left: 10px;
+			    margin-top: 10px;
+			}
+			.xuan-right i:nth-child(1):before {
+				background-image: url('https://friend.380star.com/qrqd/bundle/styles/images/detail/icon_true@2x.png');
+				width: 15px;
+				height: 15px;
+			}
+			.on{
+				background-image: linear-gradient(90deg, #ff5f6a 0%, #fd275a 100%);
+				color: white;
+			}
+			.shuliang{
+				display: -webkit-box;
+				border-top: solid 1px #eee;
+				line-height: 44px;
+				color: #888888;
+				
+				
+			}
+			.shuliang div:nth-child(1){
+				width:30%;
+			}
+			.shuliang div:nth-child(2){
+				width:70%;
+			}
+			.shuliang div:nth-child(2) div{
+				float: right;
+			}
+			.head{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				line-height: 66px;
+				background: none;
+				z-index: 999;
+			}
+			.aa{
+				position: absolute;
+			    left: 10px;
+			    top: 10px;
+			    width: 32px;
+			    min-width: 32px;
+			    height: 32px;
+			    line-height: 32px;
+			    text-align: center;
+			    display: block;
+			    z-index: 2;
+			    padding: 0;
+			    background-color: #333333;
+			    border-radius: 50%;
+			}
+			.ii:before{
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				    right: 0;
+				    bottom: 0;
+				    font-size: 22px;
+				    color: #333;
+				    z-index: 2;
+				    content: '\e6a3';
+				    font-family: 'iconfont-yd' !important;
+				    font-style: normal;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    color: #fff;
+			}	
+			.header-right{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				
+			}
+			.iii:before{
+			content: '\e687';	
+			font-family: 'iconfont-yd' !important;
+				    font-style: normal;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    color: #fff;
+			}
+			.iiii:before{
+				font-family: 'iconfont-yd' !important;
+				    font-style: normal;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    color: #fff;
+				        content: '\e6a4';
+			}
+			.aaa{
+				
+			    width: 32px;
+			    min-width: 32px;
+			    height: 32px;
+			    line-height: 32px;
+			    text-align: center;
+			    display: block;
+			    z-index: 2;
+			    padding: 0;
+			    background-color: #333333;
+			    border-radius: 50%;
+			}
+			.header-right{
+				display: -webkit-box;
+			}
+			.dibu{
+				/*display: -webkit-box;*/
+				display: flex;
+				flex-flow: row nowrap;
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				z-index: 999;
+				width: 100%;
+			}
+			.dibu div{
+				width: 34%;
+				background-color: red;
+				/*height: 100px;*/
+				text-align: center;
+				line-height: 64px;
+				
+			}
+			.dibu div i{
+				font-style: normal;
+			}
+			.dibu div:nth-child(1){
+				background-color: #fff;
+				color: #9b9b9b;
+			}
+			.dibu div:nth-child(2){
+				background-color: #333;
+				color: #fff;
+			}
+			.dibu div:nth-child(3){
+				background-color: #FD2A5B;
+				color: #fff;
+			}
+			.dibu div:nth-child(1) i:before{
+				font-family: 'iconfont-yd' !important;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: '\e695';
+    			color: #9b9b9b;
+			}
+		</style>
+	</head>
+	<body class="bg">
+		<div id="app">
+			<header class="head">
+				<a class="aa" href="shouye.html"><i class="ii"></i></a>
+				<div class="header-right">
+					
+			
+				<a class="aaa"><i class="iii"></i></a>
+				<a class="aaa" style="margin-left: 10px;"><i class="iiii"></i></a>
+				</div>
+			</header>
+			
+		
+		<div class="goods">
+			<img :src="shopinfo.goodsLogo"/>
+			<div class="price">
+				<p><span>￥</span>{{shopinfo.goodsPrice}}</p>
+				<s><span>￥</span>{{shopinfo.cutPrice}}</s>
+			</div>
+			<div class="info">
+				<p>{{shopinfo.goodsName}}</p>
+				<p v-show="shopinfoxia.eptitle=='包邮'">{{shopinfoxia.eptitle}}</p>
+				<div class="sales clearfix">
+					<span>销量{{shopinfoxia.goodsSales}}</span>
+					<span>库存{{shopinfoxia.goodsInventory}}</span>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		<div class="xuan border-b" @click="gai2()">
+				<div class="xuan-left">
+					<span>规格</span>
+				</div>
+				<div class="xuan-right" >
+					<p >{{msg}}</p>
+				</div>
+		</div>
+		
+		
+		
+			<div class="xuan border-b" @click="gai3()">
+				<div class="xuan-left">
+					<span>配送</span>
+				</div>
+				<div class="xuan-right">
+					<span>广东 至</span><i></i><span>{{sheng}}{{shi}}{{qu}}</span>
+				</div>
+			</div>
+		
+			<div class="xuan border-b" @click="gai1()">
+				<div class="xuan-left" >
+					<span>产品参数</span>
+				</div>
+				<div class="xuan-right">
+					
+				</div>
+			</div>
+		
+		<div class="xuan border-b" @click="gai()">
+				
+				<div class="xuan-right">
+					 <span>原装正品</span> 	<span>7天退货</span> 	<span>闪电发货</span>
+				</div>
+			</div>
+		
+		<!--swiper-->
+		<div class="" style="width: 100%; text-align: center;font-size: 30px;margin-bottom: 50px;">
+			相关推荐
+		</div>
+		<div class="swiper-container">
+			    <div class="swiper-wrapper" >
+			      <div class="swiper-slide"  v-for="recommendGood in recommendGoods" >
+			      	<img :src="recommendGood.goodsLogo"/>
+			      	<p>{{recommendGood.goodsName}}</p>
+			      	<!--<p>{{recommendGood.}}</p>-->
+			      
+					<p style="color: red; padding: 0 10px;"><span>￥</span>{{recommendGood.goodsPrice}}</p>
+				
+				
+			      </div>
+			     
+			    </div>
+			    <!-- Add Pagination -->
+			  
+	  </div>
+	  <div class="" style="height: 64px;">
+	  	
+	  </div>
+	  
+	  <div class="dibu">
+	  	<div><a href=""><i>收藏</i></a></div>
+	  	<div><a href=""><i>加入购物车</i></a></div>
+	  	<div><a href=""><i>立即购买</i></a></div>
+	  </div>
+	  <!--<div class="">
+	  	<ul>
+	  		<li v-for="(guiges,index) in guige">
+	  			{{guiges}}
+	  		</li>
+	  	</ul>
+	  </div>-->
+		
+		<!--mask-->
+		<div class="mask " :class="{close:isclose}" @click="gai()">
+				<!--<a href="javascript:void(0)" @click="gai()">x</a>-->
+			<div class="maskinfo" @click.stop>
+				<a class="a" href="javascript:void(0)" @click="gai()">x</a>
+				<img src="http://rs.380star.com/upload/bic/service/aservice1.jpg"/ style="width: 100%;">
+			</div>
+		</div>
+		
+		<!--参数-->
+		<div class="mask1" :class="{close:isclose1}" @click="gai1()">
+				<!--<a href="javascript:void(0)" @click="gai()">x</a>-->
+			<div class="maskinfo" @click.stop>
+				<div class="" style="width: 100%;">
+					<a class="a" href="javascript:void(0)" @click="gai1()">x</a>
+					<p style="text-align: center;line-height: 56px;">产品参数</p>
+				</div>
+				<div class="canshu">
+					<ul>
+						<li v-for="goodsPropers in goodsProper">
+							<div class="" style="width: 30%; padding: 0 10px;color: #626262;">
+								<p>{{goodsPropers.name}}</p>
+							</div>
+							<div class="" style="width: 70%;padding: 0 10px;">
+								<p>{{goodsPropers.val}}</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--规格-->
+		<div class="mask2" :class="{close:isclose2}" @click="gai2()">
+				<!--<a href="javascript:void(0)" @click="gai()">x</a>-->
+			<div class="maskinfo" @click.stop>
+				<a class="a" href="javascript:void(0)" @click="gai2()">x</a>
+				<!--<img src="http://rs.380star.com/upload/bic/service/aservice1.jpg"/ style="width: 100%;">-->
+				<div class="goodsinfo" >
+					<div class="goodsinfo-left">
+						<img :src="goodsLogo"/>
+					</div>
+					<div class="goodsinfo-right">
+						<p>￥{{goodsPrice}}</p>
+						<p>库存{{inventory}}</p>
+						<p>{{msg}}</p>
+					</div>
+				</div>
+				<div class="guige">
+					<h4>规格</h4>
+					<div class="">
+						<ul class="guigex">
+							<li v-for="(guiges,index) in guige" :class="tab==index?ison:''" @click="xuanze($event,index)">{{guiges}}</li>
+						</ul>
+					</div>
+					<div class="shuliang" style="margin-top: 30%;">
+						<div><span>数量</span></div>
+						<div>
+							<div>
+								
+							
+							<span>-</span><span>{{num}}</span><span>+</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--地址选择-->
+		<div class="mask3" :class="{close:isclose3}" @click="gai3()">
+				<!--<a href="javascript:void(0)" @click="gai()">x</a>-->
+			<div class="maskinfo3" @click.stop style="display: -webkit-box;">
+				<a class="a" href="javascript:void(0)" @click="gai3()">x</a>
+				<div class="" style="margin-top: 50px;">
+					
+				
+				<el-select v-model="sheng" clearable placeholder="请选择" style='width: 32%;'>
+			    <el-option
+			      v-for="(areaLists,index) in areaList"
+			      :key="areaLists.areaName"
+			      :label="areaLists.areaName"
+			      :value="areaLists.areaName"
+			      @click.native="addrees($event,index)"
+			      >
+			    </el-option>
+			 	 </el-select>
+				<!--<hr>-->
+				<el-select v-model="shi" clearable placeholder="请选择" style='width: 32%;'>
+			    <el-option
+			      v-for="(shijis,index) in shiji"
+			      :key="shijis.areaName"
+			      :label="shijis.areaName"
+			      :value="shijis.areaName"
+			      @click.native="shenji($event,index)"
+			      >
+			    </el-option>
+			 	 </el-select>
+				<el-select v-model="qu" clearable placeholder="请选择" style='width: 32%;'>
+			    <el-option
+			      v-for="(qujis,index) in quji"
+			      :key="qujis.areaName"
+			      :label="qujis.areaName"
+			      :value="qujis.areaName"
+			     
+			      >
+			    </el-option>
+			 	 </el-select>
+			 	 </div>
+			</div>
+		</div>
+		
+		
+		</div>
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+		<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el: '#app',
+				data: {
+					shopinfo:'',
+					shopinfoxia:'',
+					recommendGoods:'',
+					goodsProper:'',
+					isclose:true,
+					isclose1:true,
+					isclose2:true,
+					isclose3:true,
+					guige:'',
+					msg:'请选择规格',
+					ison:false,
+					skuss:'',
+					tab:-1,
+					ison:'on',
+					goodsPrice:'',
+					inventory:'',
+					goodsLogo:'',
+					num:0,
+					areaList:'',
+					shiji:'',
+					quji:'',
+					sheng:'',
+					shi:'',
+					qu:''
+					
+				},
+				mounted(){
+					
+				this.get()
+	
+				},
+				methods:{
+							get(){	
+						
+						//toplist	
+						var sea=location.search;
+					
+						var a=sea.split("&")
+						var ids = a[0].split("=")
+						var goodsId=ids[1]
+						var names= ids = a[1].split("=")
+						var shopbag=ids[1]
+						console.log(goodsId)
+						console.log(shopbag)
+						var star=''
+						
+					//	商品详情top
+
+		
+				 		this.$http.get('https://api.380star.com/friendshop/36/goods/goodsspecinfos.do',{params:{goodsid: goodsId,type: '',token:'',appname: '_wap_'}}).then(function(res){				
+							this.shopinfo=res.body.data
+							this.goodsPrice=this.shopinfo.goodsPrice
+							this.inventory=this.shopinfo.inventory
+							this.goodsLogo=this.shopinfo.goodsLogo
+							this.guige=res.body.data.specPropName[0].values
+							this.skuss=res.body.data.skus
+						console.log(this.skuss)
+					
+							
+							},function(res){
+					    console.log(res.status);
+						});
+//	地址选择					
+				this.$http.get('https://api.380star.com/friendshop/32/user/getareainfo.do').then(function(res){				
+						this.areaList=res.body.data.areaList	
+						console.log(res.body.data)
+					
+							
+							},function(res){
+					    console.log(res.status);
+						});
+						
+					
+//	商品详情xia			
+						this.$http.get('https://api.380star.com/friendshop/36/goods/platformgoodsdetail.do',{params:{goodsid: goodsId,token: '',type: 1,shareuserid: '',shopbag: 0,longitude: 114.05437526059394,latitude: 22.544932422150616,appname: '_wap_'}}).then(function(res){				
+						this.shopinfoxia=res.body.data.goodsInfo
+						this.recommendGoods=res.body.data.recommendGoods
+						this.goodsProper=res.body.data.goodsInfo.goodsProper
+						 this.goodsProper = JSON.parse(this.goodsProper);
+						console.log(this.shopinfoxia)
+						},function(res){
+				  		  console.log(res.status);
+						});	
+						
+						
+						  setTimeout(function() {
+							//			swiper
+						  var swiper = new Swiper('.swiper-container', {
+					      slidesPerView: 3,
+					      spaceBetween: 30,
+					      pagination: {
+					        el: '.swiper-pagination',
+					        clickable: true,
+					      }
+					     })
+						   }, 1000)			
+						},
+						 gai:function(){
+						  	this.isclose=!this.isclose
+						  	console.log(this.isclose)
+						 },
+						  gai1:function(){
+						  	this.isclose1=!this.isclose1
+						  	console.log(this.isclose1)
+						  },
+						  gai2:function(){
+						  	this.isclose2=!this.isclose2
+						  	console.log(this.isclose2)
+						  },
+						   gai3:function(){
+						  	this.isclose3=!this.isclose3
+						  	console.log(this.isclose3)
+						  },
+						  xuanze:function(e,index){
+						  	var message=this.skuss[index].propValues[0].val
+						  	console.log(message)
+						  		this.tab=index
+						  		console.log(this.tab)
+						  		console.log(index)
+//						  		this.ison=!this.ison
+								this.goodsPrice=this.skuss[index].price
+								this.inventory=this.skuss[index].inventory
+								this.goodsLogo=this.skuss[index].goodsLogo
+						  		this.msg="已选："+message
+						  		
+						  },
+						  addrees:function(e,index){
+						  	var id=this.areaList[index].id
+						  	this.$http.get('https://api.380star.com/friendshop/32/user/getareainfo.do',{params:{parentId:id}}).then(function(res){				
+							this.shiji=res.body.data.areaList
+							console.log(res.body.data)
+							},function(res){
+					  		  console.log(res.status);
+							});	
+						  },
+						   shenji:function(e,index){
+						  	var id=this.shiji[index].id
+						  	this.$http.get('https://api.380star.com/friendshop/32/user/getareainfo.do',{params:{parentId:id}}).then(function(res){				
+							this.quji=res.body.data.areaList
+							console.log(res.body.data)
+							},function(res){
+					  		  console.log(res.status);
+							});	
+						  }
+				
+					
+				}
+			})
+			
+
+		</script>
+	
+	</body>
+</html>

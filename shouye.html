@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			* {
+			    margin: 0;
+			    padding: 0;
+			    box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+			}
+			body, html {
+						    margin: 0;
+						    padding: 0;
+						    width: 100%;
+						    height: 100%;
+						}
+			html{
+				    background-color: #f7f7f7;
+			}
+			a{text-decoration: none;color: black;}
+			.bg{
+				width: 100%;
+				max-width: 640px;
+				margin:0 auto;
+				height: 100%;
+				/*background-color: pink;*/
+
+			}
+			
+			@font-face {
+				font-family:'iconfont-yd';
+				src: url('https://friend.380star.com/youdian/assets/font/iconfont.woff');
+			}
+			header{
+				left: 0;
+				right: 0;
+				position: fixed;
+				line-height: 44px;
+				padding: 0 100px ;
+				border-bottom: solid 1px #d8d8d8;
+				background-color: #fff;
+				z-index: 100;
+			}
+			.info-left{
+				position: absolute;
+				left: 10px;
+				top: -20%;
+			}
+			.info-left i{
+				font-family: 'iconfont-yd' !important;
+   				 font-style: normal;
+    			-webkit-font-smoothing: antialiased;
+    			line-height: 30px;
+			}
+			.info-left i:before{
+				content:'\e678';
+			}
+			.center{
+				position: relative;
+				padding: 0 10px 0 32px;
+			    margin-top: 7px;
+			    height: 30px;
+			    line-height: 30px;
+			     border-radius: 15px; 
+			    font-size: 12px;
+			    color: #9b9b9b;
+			    text-align: left;
+			    background: #efefef;
+			     margin-left: auto; 
+			     margin-right: auto; 
+			}
+			.center input{
+				outline: none;
+				border: 0;
+				width: 100%;
+				background: none;
+			}
+			.center  i{
+				position: absolute;
+				font-family: 'iconfont-yd' !important;
+   				 font-style: normal;
+    			-webkit-font-smoothing: antialiased;
+    			z-index: 5;
+    			top: 0;
+    			left: 10px;
+    			
+			}
+			.center  i:before{
+				    content: '\e66b';
+			}
+			.info-right{
+				position: absolute;
+				right: 10px;
+				top: -5px;	
+			}
+			.info-right i:before{
+		
+    content: '\e690';
+    font-family: 'iconfont-yd' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+			}
+			.fixed-top{
+				position: fixed;
+				top:37px;
+				left: 0;
+				width: 100%;
+				background-color: #fff;
+				line-height: 44px;
+				z-index: 100;
+			}
+			.topnav{
+				list-style: none;
+				display: flex;
+				flex-flow: nowrap;
+			}
+			.topnav li{width: 20%;text-align: center;}
+			.content{
+				width: 100%;
+				/*background-color: salmon;*/
+				height: 100%;
+				
+			}
+			.item{
+				display: flex;
+				flex-flow: nowrap;
+				width: 100%;
+				margin-bottom: -4px;
+			}
+			.item img{
+				width: 100%;
+			}
+			.logo{
+				font-size: 0;
+			}
+			.logo img{
+				width: 100%;
+				
+			}
+			#app{
+				width: 100%;
+			}
+			.tu{
+				padding-top: 80px;
+				background-color: #fff;
+			}
+			.bao img{width: 100%;}
+			.goods{
+				display: flex;
+				flex-flow: row wrap;
+				width: 100%;
+				padding: 0 0.5%;
+				height: auto;
+				background-color: #fff;
+			}
+			.goods>div{
+				width: 33%;
+				margin-top: -4px;
+				padding: 10px;
+			}
+			.goods div img{
+				width: 100%;
+				height: auto;
+			}
+			.goods .shopinfo p:nth-child(1){
+				/*width: 100%;*/
+				overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+				font-size: 22px;
+			}  
+			.goods .shopinfo p:nth-child(2){
+				/*width: 100%;*/
+				
+				color: #888;
+			}
+			
+			.goods .shopinfo{
+				width: 100%;
+				padding:0 10px;
+				
+			}
+			.goods .shopinfo span{
+				color: #fd2a5b;
+				font-size: 16px;
+			}
+			.goods .shopinfo s{
+				color: #b2b2b2;
+				font-size: 14px;
+			}
+			.gifter{
+				width: 100% !important;
+			}
+			.gifter img{
+				width: 100%;
+				height: auto;
+			}
+			.miao img{
+				width: 100%;
+				height: auto;
+			}
+			.xianshi ul{
+				width: 100%;
+				list-style: none;
+				background-color: #fff;
+				margin-top: -4px;
+				border-bottom: solid 1px #eee;
+			}
+			.xianshi ul li{
+			display: inline-block;	
+			width: 20%;
+			text-align: center;
+			}
+			.nowmiao{
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;	
+				padding: 20px 0 0.5%;
+				background-color: #fff;
+					}
+			.nowmiao div{
+				width: 33%;
+				
+			}
+			
+			
+			.nowmiao div img{
+				width: 100%;
+				height: auto;
+			}
+			.nowmiao .shopinfo p:nth-child(1){
+				/*width: 100%;*/
+				overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+				font-size: 22px;
+			}  
+			.nowmiao .shopinfo p:nth-child(2){
+				/*width: 100%;*/
+				
+				color: #888;
+			}
+			
+			.nowmiao .shopinfo{
+				width: 100%;
+				padding:0 10px;
+				
+			}
+			.nowmiao .shopinfo span{
+				color: #fd2a5b;
+				font-size: 16px;
+			}
+			.nowmiao .shopinfo s{
+				color: #b2b2b2;
+				font-size: 14px;
+			}
+			.more img{
+				width: 100%;
+				height: auto;
+			}
+			.meizhuang ul{
+				list-style: none;
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;
+			}
+			.meizhuang ul li{width: 50%; margin: 0; padding: 0; font-size: 0;}
+			.meizhuang ul li img{
+				width: 100%;
+				height: auto;
+			}
+			.meizhuanginfo{
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;	
+				padding: 20px 0 0.5%;
+				background-color: #fff;
+				margin-top: -1px;
+					}
+			.meizhuanginfo div{
+				width: 33%;
+				
+			}
+			
+			
+			.meizhuanginfo div img{
+				width: 100%;
+				height: auto;
+			}
+			.meizhuanginfo .shopinfo p:nth-child(1){
+				/*width: 100%;*/
+				overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+				font-size: 22px;
+			}  
+			.meizhuanginfo .shopinfo p:nth-child(2){
+				/*width: 100%;*/
+				
+				color: #888;
+			}
+			
+			.meizhuanginfo .shopinfo{
+				width: 100%;
+				padding:0 10px;
+				
+			}
+			.meizhuanginfo .shopinfo span{
+				color: #fd2a5b;
+				font-size: 16px;
+			}
+			.meizhuanginfo .shopinfo s{
+				color: #b2b2b2;
+				font-size: 14px;
+			}
+			.nvshen img{
+				width: 100%;
+				height: auto;
+			}
+			.jiushui{
+				width: 100%;
+				display: flex;
+				flex-flow:row wrap;
+			}
+			.jiushui div{
+				width: 20%;
+				font-size: 0;
+			}
+			.jiushui div img{
+				width: 100%;
+				height: auto;
+			}
+			.jiushui div p{
+				font-size: 16px;
+				text-align: center;
+				line-height: 44px;
+			}
+			.help{
+				width: 100%;
+				
+			}
+			.help img{
+				width: 100%;
+				font-size: 0;
+			}
+			.helpinfo{
+				/*position: absolute;*/
+				bottom: 0;
+				width: 100%;
+				font-size: 0;
+				margin-top: -4px;
+			}
+			.helpinfolist{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-flow: row nowrap;
+			}
+			.helpinfolist img{width: 100%;}
+			.jiushuishop{
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;	
+				padding: 20px 0 0.5%;
+				background-color: #fff;
+				margin-top: -1px;
+					}
+			.jiushuishop div{
+				width: 33%;
+				
+			}
+			
+			
+			.jiushuishop div img{
+				width: 100%;
+				height: auto;
+			}
+			.jiushuishop .shopinfo p:nth-child(1){
+				/*width: 100%;*/
+				overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+				font-size: 22px;
+			}  
+			.jiushuishop .shopinfo p:nth-child(2){
+				/*width: 100%;*/
+				
+				color: #888;
+			}
+			
+			.jiushuishop .shopinfo{
+				width: 100%;
+				padding:0 10px;
+				
+			}
+			.jiushuishop .shopinfo span{
+				color: #fd2a5b;
+				font-size: 16px;
+			}
+			.jiushuishop .shopinfo s{
+				color: #b2b2b2;
+				font-size: 14px;
+			}
+			.shiping{
+				width: 100%;
+				display: flex;
+				flex-flow:row wrap;
+			}
+			.shiping div{
+				width: 20%;
+				font-size: 0;
+			}
+			.shiping div img{
+				width: 100%;
+				height: auto;
+			}
+			.shiping div p{
+				font-size: 16px;
+				text-align: center;
+				line-height: 44px;
+			}
+			.shipingshop{
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;	
+				padding: 20px 0 0.5%;
+				background-color: #fff;
+				margin-top: -1px;
+					}
+			.shipingshop div{
+				width: 33%;
+				
+			}
+			
+			
+			.shipingshop div img{
+				width: 100%;
+				height: auto;
+			}
+			.shipingshop .shopinfo p:nth-child(1){
+				/*width: 100%;*/
+				overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+				font-size: 22px;
+			}  
+			.shipingshop .shopinfo p:nth-child(2){
+				/*width: 100%;*/
+				
+				color: #888;
+			}
+			
+			.shipingshop .shopinfo{
+				width: 100%;
+				padding:0 10px;
+				
+			}
+			.shipingshop .shopinfo span{
+				color: #fd2a5b;
+				font-size: 16px;
+			}
+			.shipingshop .shopinfo s{
+				color: #b2b2b2;
+				font-size: 14px;
+			}
+			.dibu{
+				position: fixed;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				background-color: #fff;
+				line-height: 32px;
+			}
+			.dibu ul{
+				width: 100%;
+				list-style: none;
+				display: flex;
+				flex-flow: row nowrap; 
+				    color: #8e8e8e;
+			}
+			.dibu ul li{
+				width: 25%;
+				text-align: center;
+				line-height: 1.3;
+			}
+			.dibu ul li:nth-child(1) i:before{
+				    content: "\e680";
+				    font-family: 'iconfont-yd' !important;
+					font-style: normal;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-size:24px;
+			}
+			.dibu ul li:nth-child(2) i:before{
+				   content: "\e681";
+				    font-family: 'iconfont-yd' !important;
+					font-style: normal;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-size:24px;
+			}
+			.dibu ul li:nth-child(3) i:before{
+				       content: "\e670";
+				    font-family: 'iconfont-yd' !important;
+					font-style: normal;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-size:24px;
+			}
+			.dibu ul li:nth-child(4) i:before{
+				    content: "\e67e";
+				    font-family: 'iconfont-yd' !important;
+					font-style: normal;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-size:24px;
+			}
+			.red{
+				border-bottom: 1px solid red;
+			}
+			.iscolor{
+				color:  #fd2a5b;;
+			}
+		</style>
+	</head>
+	<body class="bg">
+		
+		<div id="app">
+		<header>	
+			<div class="info-left">
+				<i></i>
+			</div>
+			<div class="center">
+				<input type="" name="" id="" value="" @click="sea"/>
+				<i></i>
+			</div>
+			<div class="info-right">
+				<i></i>
+			</div>
+		</header>
+		<div class="content">
+			<div class="fixed-top">
+				<ul class="topnav" >
+					<li v-for="(topnav,index) in toplist" :data-params="topnav.cateId" @click="qiehuan($event,index)" :class="toptab==index?isred:''">
+						<div class="title">
+							{{topnav.title}}
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<!--首页-->
+			<div class="tu" v-if="tab==0">
+				<div class="item" >
+					<div v-for="items in item"><img :src="items.iconsUrl" alt="" /></div>
+					
+				</div>
+				<div class="logo">
+					<img :src="happy.iconsUrl"/>
+				</div>
+				<div class="bao">
+					<img :src="bao.iconsUrl"/>
+				</div>
+				<div class="goods">
+					<div class="" v-for="(shopgoods,index) in goods"  @click="shopinfo($event,index)">
+						<img :src="shopgoods.goodsLogo"/>
+						<div class="shopinfo">
+						<p>{{shopgoods.goodsName}}</p>
+						<p>{{shopgoods.goodsDesc}}</p>
+						<span>{{shopgoods.goodsPrice | money}}</span>
+						<s>{{shopgoods.goodsOrigPrice}}</s>
+						</div>
+					</div>
+					<div class="gifter">
+						<img :src="gifter.iconsUrl"/>
+					</div>
+				</div>
+				<!--限时秒杀-->
+				<div class="miao">
+					<img :src="miao.iconsUrl"/>
+				</div>
+				<div class="xianshi">
+					<ul>
+						<li v-for="(time,index) in times" v-show="time.statusDesc=='昨日秒杀'"    @click="huan($event,index)" >
+							<p>{{time.statusDesc}}</p>
+							<p>{{time.title}}</p>
+						</li>
+					</ul>
+					<div class="nowmiao">
+						<div  v-for="(nowmiaos,index) in nowmiao"  v-show="nowmiaos.spikeGoodsStatus==3 || nowmiaos.spikeGoodsStatus==5" >
+							<img :src="nowmiaos.goodsLogo"/>
+							<div class="shopinfo">
+							<p>{{nowmiaos.goodsName}}</p>
+							<p>{{nowmiaos.goodsDesc}}</p>
+							<span>{{nowmiaos.goodsPrice | money}}</span>
+							<s>{{nowmiaos.goodsOrigPrice}}</s>
+							</div>
+						</div>
+					</div>
+					<div class="more">
+						<img src="https://rs.380star.com/upload/friendshop/home/pic_more_2x.jpg"/>
+					</div>
+					<div class="meizhuang">
+						<div class="nvshen" v-for="meizhuangs in meizhuang">
+							<img :src="meizhuangs.iconsUrl"/>
+						</div>
+						<ul>
+							
+							<li v-for="meizhuangbs in meizhuangb"><img :src="meizhuangbs.iconsUrl"/></li>
+							<li v-for="meizhuanginfos in meizhuanginfo"><img :src="meizhuanginfos.iconsUrl"/></li>
+						</ul>
+					</div>
+					<div class="meizhuanginfo">
+						<div  v-for="(meizhuanginfos,index) in meizhuanginfo1"  @click="shopinfo($event,index)">
+							<img :src="meizhuanginfos.goodsLogo"/>
+							<div class="shopinfo">
+							<p>{{meizhuanginfos.goodsName}}</p>
+							<p>{{meizhuanginfos.goodsDesc}}</p>
+							<span>{{meizhuanginfos.goodsPrice | money}}</span>
+							<s>{{meizhuanginfos.goodsOrigPrice}}</s>
+							</div>
+						</div>
+					</div>
+					<div class="more">
+						<img src="https://rs.380star.com/upload/friendshop/home/pic_more_2x.jpg"/>
+					</div>
+					
+				</div>
+				
+			</div>
+			<!--酒水-->
+			<div class="tu" v-if="tab==1">
+				<div class="jiushui">
+					<div v-for="jiushui in jiu">
+						<img :src="jiushui.iconsUrl"/>
+						<p>{{jiushui.title}}</p>
+					</div>
+				</div>
+				<div class="help" v-for="helps in help">
+					<img :src="helps.iconsUrl"/>
+					<div class="helpinfo">
+						
+						<ul class="helpinfolist">
+							<li v-for="helpinfolists in helpinfo"><img :src="helpinfolists.iconsUrl"/></li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="jiushuishop">
+					<div  v-for="jiushuishops in jiushuishop">
+						<img :src="jiushuishops.goodsLogo"/>
+						<div class="shopinfo">
+							<p>{{jiushuishops.goodsName}}</p>
+							<p>{{jiushuishops.goodsDesc}}</p>
+							<span>{{jiushuishops.goodsPrice | money}}</span>
+							<s>{{jiushuishops.goodsOrigPrice}}</s>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		<!--食品-->
+			<div class="tu" v-if="tab==2">
+				<div class="shiping">
+					<div v-for="shipings in shiping">
+						<img :src="shipings.iconsUrl"/>
+						<p>{{shipings.title}}</p>
+					</div>
+				</div>
+				<div class="shipingshop">
+					<div  v-for="shipingshops in shipingshop">
+						<img :src="shipingshops.goodsLogo"/>
+						<div class="shopinfo">
+							<p>{{shipingshops.goodsName}}</p>
+							<p>{{shipingshops.goodsDesc}}</p>
+							<span>{{shipingshops.goodsPrice | money}}</span>
+							<s>{{shipingshops.goodsOrigPrice}}</s>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--母婴-->
+			<div class="tu" v-if="tab==3">
+				4
+			</div>
+			<!--家电-->
+			<div class="tu" v-if="tab==4">
+				5
+			</div>
+			<!--美妆-->
+			<div class="tu" v-if="tab==5">
+				6
+			</div>
+			<!--家居-->
+			<div class="tu" v-if="tab==6">
+				7
+			</div>
+			<!--服饰-->
+			<div class="tu" v-if="tab==7">
+				3
+			</div>
+		</div>
+		
+		<div class="dibu">
+			<ul>
+				<li>
+					<i></i>
+					<p style="font-size: 12px;">店主精选</p>
+				</li>
+				<li class="iscolor">
+					<i></i>
+					<p>爆款秒杀</p>
+				</li>
+				<li>
+					<i></i>
+					<p>购物车</p>
+				</li>
+				<li>
+					<i></i>
+					<p>个人中心</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+		
+		
+		
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+	<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script type="text/javascript">
+		Vue.filter('money', function (value) {
+    return '￥' + value
+});
+		
+		
+		new Vue({
+	el: '#app',
+	data: {
+		toplist:'',
+		toptab:0,
+		isred:'red',
+		tab:0,
+		item:'',
+		happy:'',
+		bao:'',
+		goods:'',
+		gifter:'',
+		miao:'',
+		times:'',
+		nowmiao:'',
+		meizhuang:'',
+		meizhuangb:'',
+		meizhuanginfo:'',
+		jiu:'',
+		help:'',
+		helpinfo:'',
+		jiushuishop:'',
+		shiping:'',
+		shipingshop:'',
+		meizhuanginfo1:'',
+		meizhuanginfo2:''
+		
+		
+	},
+	methods:{
+			huan(e,i){
+				console.log(this.times[i])
+				var endt=this.times[i].endTime
+				var startt=this.times[i].startTime
+				 this.$http.get('https://api.380star.com/friendshop/42/promotion/queryspikeactivitygoodslist.do',{params:{starttime:startt,endtime:endt,pagesize:100,pagenum:1}}).then(function(res){
+			    // document.write(res.body);  
+			    this.nowmiao= res.body.data.list
+			    
+			    console.log(this.nowmiao)  
+				},function(res){
+			    console.log(res.status);
+				});
+				
+			},
+			qiehuan(e,index){
+				this.tab=index
+				this.toptab=index
+				console.log(this.toplist)
+//				var endt=this.times[i].endTime
+				var cateid=this.toplist[index].cateId
+				console.log(cateid)
+				 this.$http.get('https://api.380star.com/friendshop/36/home/cateadinfo2.do',{params:{type:1,cateid:cateid}}).then(function(res){
+			    // document.write(res.body); 
+//			    酒水ajax
+			    this.jiu= res.body.data.list[0].content
+			    this.help= res.body.data.list[1].content
+			    this.helpinfo= res.body.data.list[2].content
+				this.jiushuishop= res.body.data.list[3].content[0].goodsList
+//			食品ajax
+				this.shiping= res.body.data.list[0].content
+				
+				this.shipingshop= res.body.data.list[3].content[0].goodsList
+			    console.log( this.shipinginfo)  
+				},function(res){
+			    console.log(res.status);
+				});
+			},
+//			商品详情
+			shopinfo(e,index){
+				var info=this.meizhuanginfo1[index];
+				console.log(info)
+				var goodsId=info.goodsId
+				console.log(goodsId)
+				shopbag=info.shopbag
+				console.log(shopbag)
+				window.location.href="shopinfo.html?goodsId="+ goodsId + "&shopbag="+shopbag+" "
+			},
+			sea(){
+				window.location.href="serach.html"
+			}
+	}
+	,
+	mounted(){
+//	jquery	
+var ll=$(".dibu ul li")
+	$(".dibu ul li").click(function(){
+		ll.removeClass('iscolor')
+		$(this).addClass('iscolor')
+	})
+		
+		
+		
+		
+	//toplist	
+
+     this.$http.get('https://api.380star.com/friendshop/36/home/navigationlist.do',{params:{type:1}}).then(function(res){
+    // document.write(res.body);  
+    this.toplist= res.body.data.list
+    
+    console.log(this.toplist)  
+	},function(res){
+    console.log(res.status);
+	});
+	//item
+	this.$http.get('https://api.380star.com/friendshop/36/home/adinfo3.do',{params:{type:1}}).then(function(res){
+    // document.write(res.body);  
+    this.item= res.body.data.list[0].content
+    this.happy= res.body.data.list[1].content[0]
+    this.bao= res.body.data.list[4].content[0]
+    this.goods= res.body.data.list[5].content[0].goodsList
+     this.gifter= res.body.data.list[6].content[0]
+     this.miao= res.body.data.list[7].content[0]
+//   this.times=res.body.data.list[8].content
+//   this.nowmiao=res.body.data.list[8].content[6].goodsList
+     this.meizhuang=res.body.data.list[9].content
+      this.meizhuangb=res.body.data.list[10].content
+      this.meizhuanginfo=res.body.data.list[11].content
+    console.log(res.body.data)  
+//   console.log(this.times)
+	},function(res){
+    console.log(res.status);
+	});
+	
+	this.$http.get('https://api.380star.com/friendshop/36/home/adinfocontents.do',{params:{homemodulecode: 'YDOM001589,YDOM001528,YDOM001529,YDBK000366,YDOM001530,YDOM001510,YDOM001511,YDBK000360,YDOM001512,YDOM001513' ,shopbag: 0,type: 1}}).then(function(res){
+    // document.write(res.body);  
+    this.meizhuanginfo1= res.body.data.list[3].content[0].goodsList
+   
+    console.log(res.body.data)  
+//   console.log(this.times)
+	},function(res){
+    console.log(res.status);
+	})
+//	限时秒杀
+	this.$http.get('https://api.380star.com/friendshop/36/home/adinfocontents.do',{params:{homemodulecode: 'YDOM001602,YDMS000017,YDOM001679,YDOM001680,YDBK000428,YDOM001681,YDOM001611,YDOM001612,YDBK000388,YDOM001613',shopbag: 0,type: 2,token: 'p:yd:sid:f5c0365fa5344e1d8af73378c54d13ce1131'}}).then(function(res){
+	    // document.write(res.body);  
+	    this.times= res.body.data.list[1].content
+	   
+	    console.log(res.body.data)  
+	//   console.log(this.times)
+		},function(res){
+	    console.log(res.status);
+		})
+	
+	},
+	
+	})
+	</script>
+	</body>
+</html>
